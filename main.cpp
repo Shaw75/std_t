@@ -31,4 +31,4 @@ int main() {
     }
     std::cout << "sum: " << sum << '\n';
 
-} // Îö¹¹×Ô¶¯ stop()
+} 
