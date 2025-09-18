@@ -63,7 +63,7 @@ public:
 						}
 						task();
 					}
-				});
+			});
 		}
 	}
 	void stop() {
