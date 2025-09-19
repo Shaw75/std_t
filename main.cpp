@@ -2,6 +2,7 @@
 #include <syncstream>
 #include "ThreadPool.h"
 #include "Function.h"
+#include "common_type.h"
 
 int print_task(int n) {
     std::osyncstream{ std::cout } << "task" << n << "is running on thr" <<
@@ -33,9 +34,21 @@ int main() {
     {
         Function<int(int)> func = print_task2;
         auto f1 = func(2);
+        std::cout << f1 << std::endl;
     }
-   
-    std::cout << f1 << std::endl;
+    {
+        struct Animal {
 
+        };
+        struct cat : Animal {
+
+        };
+        struct dog :Animal {
+
+        };
+        using what = common_type<Animal, cat>::type;
+        using what1 = common_type<int, double, float>::type;
+
+    }
     return 0;
 } 

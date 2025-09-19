@@ -7,7 +7,11 @@
 #include <functional>
 #include <future>
 #include <memory>
-
+/**
+ * @brief 
+ * 实现线程池
+ * @return 
+ */
 inline std::size_t default_thread_pool_size() noexcept {
 	std::size_t num_threads = std::thread::hardware_concurrency();
 	num_threads = num_threads == 0 ? 2 : num_threads; // 防止无法检测当前硬件，保证线程池至少有两个线程

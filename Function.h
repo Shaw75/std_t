@@ -1,4 +1,7 @@
 #pragma once
+/*
+*  µœ÷std::function
+*/
 #include <memory>
 
 template <class FnSig>

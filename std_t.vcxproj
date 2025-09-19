@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="common_type.h" />
     <ClInclude Include="Function.h" />
     <ClInclude Include="ThreadPool.h" />
   </ItemGroup>
