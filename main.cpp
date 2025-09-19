@@ -33,9 +33,8 @@ int main() {
     {
         Function<int(int)> func = print_task2;
         auto f1 = func(2);
+        std::cout << f1 << std::endl;
     }
-   
-    std::cout << f1 << std::endl;
-
+ 
     return 0;
 } 
