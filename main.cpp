@@ -3,6 +3,9 @@
 #include "ThreadPool.h"
 #include "Function.h"
 #include "common_type.h"
+#include "UniquePtr.h"
+#include "Array.h"
+
 
 int print_task(int n) {
     std::osyncstream{ std::cout } << "task" << n << "is running on thr" <<
@@ -38,16 +41,37 @@ int main() {
     }
     {
         struct Animal {
-
+        public:
         };
         struct cat : Animal {
 
         };
         struct dog :Animal {
 
-        };
+        }; 
+       
         using what = common_type<Animal, cat>::type;
         using what1 = common_type<int, double, float>::type;
+        
+    }
+    {
+        #pragma warning(disable: 4996)  // ½ûÓÃ4996ºÅ¾¯¸æ
+        auto b = UniquePtr<int[]>(new int[2]);
+      
+        struct MyClass {
+            int a, b, c;
+        };
+        auto c = makeUnique<MyClass>(1, 2, 3);
+        std::cout << c->a << "\n";
+  
+    }
+    {
+        Array<int, 32> array{1,2,3};
+        array.at(0);
+        std::cout << array.front() << std::endl;
+        array.fill(5);
+        std::cout << array.front() << std::endl;
+        Array a{ 1,2,3,4 };
 
     }
     return 0;

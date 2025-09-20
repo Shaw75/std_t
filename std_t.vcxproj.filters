@@ -24,6 +24,12 @@
     <ClInclude Include="common_type.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="UniquePtr.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Array.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
