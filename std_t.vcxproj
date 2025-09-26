@@ -22,8 +22,10 @@
     <ClInclude Include="Array.h" />
     <ClInclude Include="common_type.h" />
     <ClInclude Include="Function.h" />
+    <ClInclude Include="List.hpp" />
     <ClInclude Include="ThreadPool.h" />
     <ClInclude Include="UniquePtr.h" />
+    <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

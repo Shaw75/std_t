@@ -5,6 +5,8 @@
 #include "common_type.h"
 #include "UniquePtr.h"
 #include "Array.h"
+#include "Vector.h"
+#include "List.hpp"
 
 
 int print_task(int n) {
@@ -12,6 +14,7 @@ int print_task(int n) {
         std::this_thread::get_id() << "\n";
     return n;
 }
+
 
 int print_task2(int n) {
     std::osyncstream{ std::cout } << "@@@@" << n << "%%%%" << std::endl;
@@ -73,6 +76,31 @@ int main() {
         std::cout << array.front() << std::endl;
         Array a{ 1,2,3,4 };
 
+    }
+    {
+        Vector<int> arr;
+        for (size_t i = 0; i < 6; i++) {
+            arr.push_back(i);
+        }
+        for (size_t i = 0; i < arr.size(); i++) {
+            std::cout << arr[i] << std::endl;
+        }
+        Vector<int> arr2{ 1,2,3,4,8,9};
+        for (size_t i = 0; i < arr2.size(); i++) {
+            std::cout <<"初始化列表：" << arr2[i] << std::endl;
+        }
+    }
+    {
+        List<int> list{1,2,3,4};
+        list.push_back(1);
+        list.emplace_front(1);
+        size_t i = 0;
+        list.remove(1);
+       
+        for (auto it = list.crbegin(); it != list.crend(); ++it) {
+            std::cout << "val:" << *it << std::endl;
+        }
+        std::cout << "list size:" << list.size() << std::endl;
     }
     return 0;
 } 
