@@ -23,6 +23,7 @@
     <ClInclude Include="common_type.h" />
     <ClInclude Include="Function.h" />
     <ClInclude Include="List.hpp" />
+    <ClInclude Include="Optional.hpp" />
     <ClInclude Include="ThreadPool.h" />
     <ClInclude Include="UniquePtr.h" />
     <ClInclude Include="Vector.h" />

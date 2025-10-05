@@ -1,5 +1,6 @@
 #include <iostream>
 #include <syncstream>
+#include <optional>
 #include "ThreadPool.h"
 #include "Function.h"
 #include "common_type.h"
@@ -7,6 +8,8 @@
 #include "Array.h"
 #include "Vector.h"
 #include "List.hpp"
+#include "Optional.hpp"
+
 
 
 int print_task(int n) {
@@ -101,6 +104,11 @@ int main() {
             std::cout << "val:" << *it << std::endl;
         }
         std::cout << "list size:" << list.size() << std::endl;
+    }
+    {
+        Optional<int> opt;
+        std::cout << opt.value_or(1) << std::endl;
+        Optional opt2(1);
     }
     return 0;
 } 
