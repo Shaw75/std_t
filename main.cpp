@@ -1,16 +1,27 @@
 #include <iostream>
 #include <syncstream>
 #include <optional>
-#include "ThreadPool.h"
-#include "Function.h"
-#include "common_type.h"
-#include "UniquePtr.h"
-#include "Array.h"
-#include "Vector.h"
+#include "ThreadPool.hpp"
+#include "Function.hpp"
+#include "common_type.hpp"
+#include "UniquePtr.hpp"
+#include "Array.hpp"
+#include "Vector.hpp"
 #include "List.hpp"
 #include "Optional.hpp"
+#include "SharedPtr.hpp"
 
-
+struct Student {
+    const char* name;
+    int age;
+    explicit Student(const char* name_, int age_) : name{ name_ }, age{ age_ } {
+        std::cout << "构造" << std::endl;
+    }
+    Student(Student&&) = delete;
+    ~Student() {
+        std::cout << age <<"析构" << std::endl;
+    }
+};
 
 int print_task(int n) {
     std::osyncstream{ std::cout } << "task" << n << "is running on thr" <<
@@ -68,6 +79,7 @@ int main() {
             int a, b, c;
         };
         auto c = makeUnique<MyClass>(1, 2, 3);
+         
         std::cout << c->a << "\n";
   
     }
@@ -110,5 +122,15 @@ int main() {
         std::cout << opt.value_or(1) << std::endl;
         Optional opt2(1);
     }
-    return 0;
+    {
+        SharedPtr<Student> p = makeShared<Student>("Shaw", 23);
+        SharedPtr<Student> p2(new Student("mike", 22));
+        SharedPtr<Student> p3 = p2;
+        auto p4 = makeShared<int[]>(5);
+        std::cout << "姓名：" << p->name << " " << "年龄:" << p->age << std::endl;
+        std::cout << "姓名：" << p2->name << " " << "年龄:" << p2->age << std::endl;
+        std::cout << "姓名：" << p3->name << " " << "年龄:" << p3->age << std::endl;
+        return 0;
+    }
+    
 } 

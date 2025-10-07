@@ -19,17 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Array.h" />
-    <ClInclude Include="common_type.h" />
-    <ClInclude Include="Function.h" />
+    <ClInclude Include="Array.hpp" />
+    <ClInclude Include="common_type.hpp" />
+    <ClInclude Include="Function.hpp" />
     <ClInclude Include="List.hpp" />
     <ClInclude Include="Optional.hpp" />
-    <ClInclude Include="ThreadPool.h" />
-    <ClInclude Include="UniquePtr.h" />
-    <ClInclude Include="Vector.h" />
+    <ClInclude Include="ThreadPool.hpp" />
+    <ClInclude Include="UniquePtr.hpp" />
+    <ClInclude Include="Vector.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SharedPtr.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

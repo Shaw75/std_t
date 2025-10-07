@@ -15,22 +15,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ThreadPool.h">
+    <ClInclude Include="ThreadPool.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Function.h">
+    <ClInclude Include="Function.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="common_type.h">
+    <ClInclude Include="common_type.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="UniquePtr.h">
+    <ClInclude Include="UniquePtr.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Array.h">
+    <ClInclude Include="Array.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Vector.h">
+    <ClInclude Include="Vector.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="List.hpp">
@@ -43,6 +43,9 @@
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="SharedPtr.hpp">
+      <Filter>头文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

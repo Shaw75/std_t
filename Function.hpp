@@ -3,6 +3,7 @@
 *  µœ÷std::function
 */
 #include <memory>
+#include <stdexcept>
 
 template <class FnSig>
 struct Function {
