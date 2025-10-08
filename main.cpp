@@ -127,6 +127,7 @@ int main() {
         SharedPtr<Student> p2(new Student("mike", 22));
         SharedPtr<Student> p3 = p2;
         auto p4 = makeShared<int[]>(5);
+      
         std::cout << "姓名：" << p->name << " " << "年龄:" << p->age << std::endl;
         std::cout << "姓名：" << p2->name << " " << "年龄:" << p2->age << std::endl;
         std::cout << "姓名：" << p3->name << " " << "年龄:" << p3->age << std::endl;
