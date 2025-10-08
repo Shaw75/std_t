@@ -10,6 +10,7 @@
 #include "List.hpp"
 #include "Optional.hpp"
 #include "SharedPtr.hpp"
+#include "Variant.hpp"
 
 struct Student {
     const char* name;
@@ -131,7 +132,13 @@ int main() {
         std::cout << "姓名：" << p->name << " " << "年龄:" << p->age << std::endl;
         std::cout << "姓名：" << p2->name << " " << "年龄:" << p2->age << std::endl;
         std::cout << "姓名：" << p3->name << " " << "年龄:" << p3->age << std::endl;
-        return 0;
+       
     }
-    
+    {
+        Variant<int, double> v(1);
+        Variant<int, double, std::string> v2(inPlaceIndex<2>, "123");
+        int& p = v.get<0>();
+        std::cout << p << std::endl;
+    }
+    return 0;
 } 

@@ -20,6 +20,7 @@ struct InPlace {
 constexpr InPlace inPlace;
 
 inline constexpr nullopt_t nullopt;
+
 template <class T>
 struct Optional {
 private:

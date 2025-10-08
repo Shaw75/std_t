@@ -26,6 +26,7 @@
     <ClInclude Include="Optional.hpp" />
     <ClInclude Include="ThreadPool.hpp" />
     <ClInclude Include="UniquePtr.hpp" />
+    <ClInclude Include="Variant.hpp" />
     <ClInclude Include="Vector.hpp" />
   </ItemGroup>
   <ItemGroup>
