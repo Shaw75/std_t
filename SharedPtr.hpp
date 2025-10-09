@@ -184,7 +184,7 @@ public:
 		m_cb = new _SpcontrolBlockImpl <Y, Deleter>(ptr, std::move(deleter));
 	}
 
-	long user_count() noexcept {
+	long use_count() noexcept {
 		return m_cb ? m_cb->m_refcnt() : 0;
 	}
 	bool unique() noexcept {
